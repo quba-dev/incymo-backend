@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "incymo-backend"
+version = "0.1.0"
+description = ""
+authors = ["Denis Davydov <1209424-dodav@users.noreply.gitlab.com>"]
+
+[tool.poetry.scripts]
+start = "incymo_backend.main:start"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.66.0"
+uvicorn = {extras = ["standard"], version = "^0.14.0"}
+fastapi-utils = "^0.2.1"
+PlanOut = "^0.6.0"
+six = "^1.16.0"
+requests = "^2.26.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = {version = "^21.7b0", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
